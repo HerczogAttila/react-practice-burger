@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "stable"
+branches:
+  only:
+    - master
 cache:
   directories:
   - node_modules
@@ -8,4 +11,4 @@ script:
   - npm test
   - npm run build
 after_success:
-  - gh-pages -d build
+  - npm run deploy
