@@ -12,6 +12,8 @@ script:
   - npm run build
 after_success:
   - yarn run deploy
+deploy:
+  skip_cleanup: true
 notifications:
   email:
     on_failure: never
