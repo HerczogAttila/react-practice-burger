@@ -11,7 +11,7 @@ script:
   - npm test
   - npm run build
 after_success:
-  - npm run deploy
+  - yarn run deploy
 notifications:
   email:
     on_failure: never
