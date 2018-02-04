@@ -12,3 +12,7 @@ script:
   - npm run build
 after_success:
   - npm run deploy
+notifications:
+  email:
+    on_failure: never
+    on_success: never
