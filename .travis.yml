@@ -11,9 +11,11 @@ script:
   - npm test
   - npm run build
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: yarn deploy
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  on:
+    branch: master
 notifications:
   email:
     on_failure: never
