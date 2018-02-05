@@ -98,6 +98,7 @@ class BurgerBuilder extends Component {
           />
         </Modal>
         <Burger ingredients={this.state.ingredients}/>
+        <div>Status: {(127 / 423 * 100).toFixed(1)}%</div>
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
