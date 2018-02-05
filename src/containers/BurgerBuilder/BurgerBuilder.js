@@ -25,7 +25,8 @@ class BurgerBuilder extends Component {
       },
       totalPrice: 4,
       purchasable: false,
-      purchasing: false
+      purchasing: false,
+      status: 128
     }
   }
 
@@ -98,7 +99,7 @@ class BurgerBuilder extends Component {
           />
         </Modal>
         <Burger ingredients={this.state.ingredients}/>
-        <div>Status: {(127 / 423 * 100).toFixed(1)}%</div>
+        <div>Status: {(this.state.status / 423 * 100).toFixed(1)}%</div>
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
