@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 
-import Aux from '../../hoc/Aux_win'
+import Aux from '../../hoc/Aux/Aux_win'
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import axios from '../../axios-order';
 
 const INGREDIENT_PRICES = {
@@ -29,7 +30,7 @@ class BurgerBuilder extends Component {
       purchasable: false,
       purchasing: false,
       loading: false,
-      status: 165
+      status: 166
     }
   }
 
@@ -140,4 +141,4 @@ class BurgerBuilder extends Component {
   }
 }
 
-export default BurgerBuilder
+export default withErrorHandler(BurgerBuilder, axios);
