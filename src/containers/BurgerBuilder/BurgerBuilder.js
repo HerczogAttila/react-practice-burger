@@ -26,7 +26,7 @@ class BurgerBuilder extends Component {
       purchasing: false,
       loading: false,
       error: null,
-      status: 205
+      status: 206
     }
   }
 
