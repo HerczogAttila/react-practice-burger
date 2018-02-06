@@ -25,8 +25,7 @@ class BurgerBuilder extends Component {
       purchasable: false,
       purchasing: false,
       loading: false,
-      error: null,
-      status: 213
+      error: null
     }
   }
 
@@ -134,7 +133,6 @@ class BurgerBuilder extends Component {
       burger = (
         <Aux>
           <Burger ingredients={this.state.ingredients}/>
-          <div>Status: {(this.state.status / 423 * 100).toFixed(1)}%</div>
           <BuildControls
             ingredientAdded={this.addIngredientHandler}
             ingredientRemoved={this.removeIngredientHandler}
