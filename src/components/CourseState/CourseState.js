@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 
 class CourseState extends Component {
   state = {
-    status: 218,
+    status: 219,
+    section: 13,
+    lecture: 4,
     sections: [
       {num: 13, lectures: [1, 2, 12, 8, 6, 4, 8, 4, 8, 1, 5, 2, 8, 1, 2]},
       {num: 14, lectures: [1, 2, 3, 5, 7, 7, 3, 4, 8, 6, 4, 3, 13, 9, 5, 10, 5, 8, 2]},
@@ -28,7 +30,9 @@ class CourseState extends Component {
         <div>Status: {(this.state.status / 423 * 100).toFixed(1)}%</div>
         {this.state.sections.map(section => {
           return (
-            <div>{section.num}. Section: {(section.lectures.reduce( function(cnt,o){ return cnt + o; }, 0) / 60).toFixed(2)} hour</div>
+            <div style={section.num === this.state.section ? {color: 'red'} : null}>
+              {section.num}. Section: {(section.lectures.reduce( function(cnt,o){ return cnt + o; }, 0) / 60).toFixed(2)} hour
+            </div>
           );
         })}
       </div>
