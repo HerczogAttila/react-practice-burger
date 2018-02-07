@@ -5,10 +5,11 @@ class CourseState extends Component {
     goal: 253,
     status: 253,
     section: 15,
-    lecture: 3,
+    lecture: 4,
     sections: [
       {num: 13, lectures: [1, 2, 12, 8, 6, 4, 8, 4, 8, 1, 5, 2, 8, 1, 2]},
       {num: 14, lectures: [1, 2, 3, 5, 7, 7, 3, 4, 8, 6, 4, 3, 13, 9, 5, 10, 5, 8, 2]},
+
       {num: 15, lectures: [6, 4, 2, 7, 10, 6, 4, 9, 3]},
       {num: 16, lectures: [1, 8, 8, 2, 4, 6, 8, 7, 6, 3, 7, 3, 2, 2, 1]},
       {num: 17, lectures: [1, 3, 3, 6, 4, 8, 5, 2, 7, 4, 6, 4, 3, 5, 9, 2, 14, 1, 8, 8, 1]},
