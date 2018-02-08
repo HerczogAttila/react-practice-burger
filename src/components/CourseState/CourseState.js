@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 
 class CourseState extends Component {
   state = {
-    goal: 253,
-    status: 263,
-    section: 16,
-    lecture: 1,
+    goal: 301,
+    status: 279,
+    section: 17,
+    lecture: 2,
     sections: [
       {num: 13, lectures: [1, 2, 12, 8, 6, 4, 8, 4, 8, 1, 5, 2, 8, 1, 2]},
       {num: 14, lectures: [1, 2, 3, 5, 7, 7, 3, 4, 8, 6, 4, 3, 13, 9, 5, 10, 5, 8, 2]},
       {num: 15, lectures: [6, 4, 2, 7, 10, 6, 4, 9, 3]},
-
       {num: 16, lectures: [1, 8, 8, 2, 4, 6, 8, 7, 6, 3, 7, 3, 2, 2, 1]},
+
       {num: 17, lectures: [1, 3, 3, 6, 4, 8, 5, 2, 7, 4, 6, 4, 3, 5, 9, 2, 14, 1, 8, 8, 1]},
       {num: 18, lectures: [1, 3, 1, 13, 7, 7, 6, 9, 6, 7, 11, 8, 7, 8, 13, 15, 7, 3, 5, 8, 1]},
       {num: 19, lectures: [1, 6, 7, 2, 3, 4, 5, 1]},
