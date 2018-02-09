@@ -35,6 +35,7 @@ class CourseState extends Component {
     return (
       <div>
         <div>Status: {(status / this.state.end * 100).toFixed(1)}%</div>
+        <div>Missing: {this.state.end - status}</div>
         {goalElement}
         {this.state.sections.map(section => {
           return section.num < this.state.section ? (
