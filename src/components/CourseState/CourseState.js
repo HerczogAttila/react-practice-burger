@@ -5,7 +5,7 @@ class CourseState extends Component {
     goal: 301,
     status: 279,
     section: 17,
-    lecture: 10,
+    lecture: 11,
     sections: [
       {num: 13, lectures: [1, 2, 12, 8, 6, 4, 8, 4, 8, 1, 5, 2, 8, 1, 2]},
       {num: 14, lectures: [1, 2, 3, 5, 7, 7, 3, 4, 8, 6, 4, 3, 13, 9, 5, 10, 5, 8, 2]},
