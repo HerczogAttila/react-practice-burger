@@ -17,10 +17,14 @@ const reducer = (state = initialState, action) => {
         ...action.orderData,
         id: action.orderId
       };
+      let orders = state.orders;
+      if (!orders) {
+        orders = [];
+      }
       return {
         ...state,
         loading: false,
-        orders: state.orders.concat(newOrder)
+        orders: orders.concat(newOrder)
       };
     case actionTypes.PURCHASE_BURGER_FAIL:
       return {

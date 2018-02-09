@@ -125,7 +125,7 @@ class ContactData extends Component {
     const order = {
       ingredients: this.props.ingredients,
       price: this.props.price,
-      orderDate: formData
+      orderData: formData
     };
 
     this.props.onOrderBurger(order);
@@ -143,6 +143,7 @@ class ContactData extends Component {
     for (let inputIdentifier in updatedOrderForm) {
       formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
     }
+    formIsValid = true;
 
     this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
   };
@@ -188,16 +189,16 @@ class ContactData extends Component {
 
 const mapStateToProps = state => {
   return {
-    ingredients: state.ingredients,
-    price: state.totalPrice,
-    loading: state.loading
-  }
+    ingredients: state.burgerBuilder.ingredients,
+    price: state.burgerBuilder.totalPrice,
+    loading: state.order.loading
+  };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     onOrderBurger: (orderData) => dispatch(actions.purchaseBurger(orderData))
-  }
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps())(withErrorHandler(ContactData, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactData, axios));
