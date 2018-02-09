@@ -23,23 +23,41 @@ const reducer = (state = initialState, action) => {
         ...action.orderData,
         id: action.orderId
       };
-      let orders = state.orders;
-      if (!orders) {
-        orders = [];
-      }
       return {
         ...state,
         loading: false,
         purchased: true,
-        orders: orders.concat(newOrder)
+        orders: state.orders.concat(newOrder)
       };
     case actionTypes.PURCHASE_BURGER_FAIL:
       return {
         ...state,
         loading: false
       };
+    case actionTypes.FETCH_ORDERS_INIT: {
+      return {
+        ...state,
+        loading: true
+      };
+    }
+    case actionTypes.FETCH_ORDERS_SUCCESS: {
+      return {
+        ...state,
+        loading: false,
+        orders: action.orders
+      };
+    }
+    case actionTypes.FETCH_ORDERS_FAIL: {
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      };
+    }
     default:
-      return {}
+      return {
+        ...state
+      }
   }
 };
 
