@@ -6,7 +6,7 @@ class CourseState extends Component {
     goal: 311,
     status: 301,
     section: 18,
-    lecture: 16,
+    lecture: 17,
     sections: [
       {num: 13, lectures: [1, 2, 12, 8, 6, 4, 8, 4, 8, 1, 5, 2, 8, 1, 2]},
       {num: 14, lectures: [1, 2, 3, 5, 7, 7, 3, 4, 8, 6, 4, 3, 13, 9, 5, 10, 5, 8, 2]},
@@ -39,24 +39,24 @@ class CourseState extends Component {
         {goalElement}
         {this.state.sections.map(section => {
           return section.num < this.state.section ? (
-            <div>
+            <div key={section.num}>
               {section.num}. Section: 0 hour
             </div>
           ) : section.num === this.state.section ? (
-            <div style={{color: 'red'}}>
+            <div key={section.num} style={{ color: 'red' }}>
               {section.num}. Section: {(section.lectures.splice(this.state.lecture, section.lectures.length).reduce(
-              function (cnt, o) {
-                return cnt + o;
-              }, 0
-            ) / 60).toFixed(2)} hour
+                function (cnt, o) {
+                  return cnt + o;
+                }, 0
+              ) / 60).toFixed(2)} hour
             </div>
           ) : (
-            <div>
-              {section.num}. Section: {(section.lectures.reduce(function (cnt, o) {
-              return cnt + o;
-            }, 0) / 60).toFixed(2)} hour
+                <div key={section.num}>
+                  {section.num}. Section: {(section.lectures.reduce(function (cnt, o) {
+                    return cnt + o;
+                  }, 0) / 60).toFixed(2)} hour
             </div>
-          );
+              );
         })}
       </div>
     );
