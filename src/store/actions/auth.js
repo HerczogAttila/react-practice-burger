@@ -44,7 +44,8 @@ export const auth = (email, password, isSignUp) => {
     dispatch(authStart());
     const authData = {
       email: email,
-      password: password
+      password: password,
+      returnSecureToken: true
     };
     let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=';
     if (isSignUp) {
