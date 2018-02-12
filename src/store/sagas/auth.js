@@ -5,7 +5,7 @@ import axios from "axios";
 import * as actions from '../actions/index';
 import { authSuccess, checkAuthTimeout } from "../actions/auth";
 
-const key = '';
+const key = 'AIzaSyBq4pGsaRFIjnKZKEKw3QmYPN81Poj6dTc';
 
 export function* logoutSaga(action) {
   yield call([localStorage, 'removeItem'], 'token');
