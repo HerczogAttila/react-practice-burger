@@ -9,7 +9,8 @@ const order = (props) => {
   }
 
   const ingredientOutput = ingredients.map(ingredient => {
-    return <span style={{
+    return <span
+      style={{
         textTransform: 'capitalize',
         display: 'inline-block',
         margin: '0 8px',

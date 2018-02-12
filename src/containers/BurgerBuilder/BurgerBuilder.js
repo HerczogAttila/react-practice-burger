@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Aux from '../../hoc/Aux_win/Aux_win'
 import Burger from '../../components/Burger/Burger';
@@ -35,7 +35,7 @@ class BurgerBuilder extends Component {
 
   purchaseHandler = () => {
     if (this.props.isAuthenticated) {
-      this.setState({ purchased: true });
+      this.setState({purchased: true});
     } else {
       this.props.onSetAuthRedirectPath('/checkout');
       this.props.history.push('/auth');

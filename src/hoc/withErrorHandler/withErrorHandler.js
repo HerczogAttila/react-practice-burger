@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../Aux_win/Aux_win';

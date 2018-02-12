@@ -97,7 +97,7 @@ class Auth extends Component {
     );
 
     if (this.props.loading) {
-      form = <Spinner />;
+      form = <Spinner/>;
     }
 
     let errorMessage = null;
@@ -107,7 +107,7 @@ class Auth extends Component {
 
     let authRedirect = null;
     if (this.props.isAuthenticated) {
-      authRedirect = <Redirect to={this.props.authRedirectPath} />;
+      authRedirect = <Redirect to={this.props.authRedirectPath}/>;
     }
 
     return (
@@ -118,7 +118,7 @@ class Auth extends Component {
           {form}
           <Button buttonType="Success">SUBMIT</Button>
         </form>
-        <Button clicked={this.switchOfModeHandler} buttonType="Danger" >SWITCH TO {this.state.isSignUp ? 'SIGNIN' : 'SIGNUP'}</Button>
+        <Button clicked={this.switchOfModeHandler} buttonType="Danger">SWITCH TO {this.state.isSignUp ? 'SIGNIN' : 'SIGNUP'}</Button>
       </div>
     );
   }

@@ -57,7 +57,7 @@ export const setAuthRedirectPath = (path) => {
 };
 
 export const authCheckState = () => {
-  return  {
+  return {
     type: actionTypes.AUTH_CHECK_STATE
   };
 };

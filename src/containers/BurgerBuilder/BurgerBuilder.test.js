@@ -18,17 +18,17 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer);
 
-configure({ adapter: new Adapter() });
+configure({adapter: new Adapter()});
 
 describe('<BurgerBuilder />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<BurgerBuilder store={store} />);
+    wrapper = shallow(<BurgerBuilder store={store}/>);
   });
 
   it('should render <BuildControls /> when receiving ingredients', () => {
-    wrapper.setProps({ ingredients: {salad: 0}});
+    wrapper.setProps({ingredients: {salad: 0}});
     expect(wrapper.find(BuildControls)).toHaveLength(0);
   });
 });
