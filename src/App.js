@@ -28,8 +28,8 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path="/auth" component={asyncAuth}/>
-        <Route path="/" exact component={BurgerBuilder}/>
+        <Route path="/react-practice-burger/auth" component={asyncAuth}/>
+        <Route path="/react-practice-burger/" exact component={BurgerBuilder}/>
         <Redirect to="/"/>
       </Switch>
     );
@@ -37,12 +37,12 @@ class App extends Component {
     if (this.props.isAuthenticated) {
       routes = (
         <Switch>
-          <Route path="/checkout" component={asyncCheckout}/>
-          <Route path="/orders" component={asyncOrders}/>
-          <Route path="/logout" component={Logout}/>
-          <Route path="/auth" component={asyncAuth}/>
-          <Route path="/" exact component={BurgerBuilder}/>
-          <Redirect to="/"/>
+          <Route path="/react-practice-burger/checkout" component={asyncCheckout}/>
+          <Route path="/react-practice-burger/orders" component={asyncOrders}/>
+          <Route path="/react-practice-burger/logout" component={Logout}/>
+          <Route path="/react-practice-burger/auth" component={asyncAuth}/>
+          <Route path="/react-practice-burger/" exact component={BurgerBuilder}/>
+          <Redirect to="/react-practice-burger/"/>
         </Switch>
       );
     }
