@@ -22,20 +22,14 @@ export const setIngredients = (ingredients) =>{
   }
 };
 
-export const fetchIngredients = () => {
+export const fetchIngredientsFailed = () => {
   return {
     type: actionTypes.FETCH_INGREDIENTS_FAILED
   }
 };
 
 export const initIngredients = () => {
-  return dispatch => {
-    axios.get('/ingredients.json')
-      .then(response => {
-        dispatch(setIngredients(response.data));
-      })
-      .catch(() => {
-        dispatch(fetchIngredients());
-      });
-  };
+  return {
+    type: actionTypes.INIT_INGREDIENTS
+  }
 };
