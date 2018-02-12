@@ -41,7 +41,7 @@ class Auth extends Component {
         touched: false
       }
     },
-    isSignUp: true
+    isSignUp: false
   };
 
   componentDidMount() {
@@ -118,7 +118,7 @@ class Auth extends Component {
           {form}
           <Button buttonType="Success">SUBMIT</Button>
         </form>
-        <Button clicked={this.switchOfModeHandler} buttonType="Danger" >SWITCH TO {this.state.isSignUp ? 'SIGNUP' : 'SIGNIN'}</Button>
+        <Button clicked={this.switchOfModeHandler} buttonType="Danger" >SWITCH TO {this.state.isSignUp ? 'SIGNIN' : 'SIGNUP'}</Button>
       </div>
     );
   }
